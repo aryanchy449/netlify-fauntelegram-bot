@@ -3,7 +3,7 @@ const startAction = require('./actions/start')
 
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
-#const message= require('telegraf/filters')
+const message= require('telegraf/filters')
 bot.start((ctx) => ctx.reply('Welcome'))
 bot.help((ctx) => ctx.reply('Send me a sticker'))
 bot.on(message('sticker'), (ctx) => ctx.reply('👍'))
